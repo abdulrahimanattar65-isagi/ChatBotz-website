@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('chatbotz-theme');
+        document.documentElement.dataset.theme = savedTheme === 'light' ? 'light' : 'dark';
+        document.querySelector('meta[name="theme-color"]').content = savedTheme === 'light' ? '#ffffff' : '#000000';
+      } catch { document.documentElement.dataset.theme = 'dark'; }
+    </script>
+    <title>ChatBotz – AI Chatbots & Messaging Automation for Business</title>
+    <meta name="description" content="ChatBotz helps businesses automate WhatsApp, Instagram and Facebook conversations with AI chatbots, a unified inbox, workflows, lead management, campaigns and analytics." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ChatBotz" />
+    <meta property="og:title" content="ChatBotz – AI Chatbots & Messaging Automation" />
+    <meta property="og:description" content="Automate customer conversations, capture leads and grow with one platform." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ChatBotz","applicationCategory":"BusinessApplication","operatingSystem":"Web","description":"AI chatbots and messaging automation platform for businesses."}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
